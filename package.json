@@ -1,0 +1,19 @@
+{
+  "name": "bsmap-master",
+  "version": "1.0.0",
+  "description": "Markers z-index:   address: 1000   bs sector: 750   region: 500",
+  "main": "Address.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "node-fetch": "^3.3.2"
+  }
+}
