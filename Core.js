@@ -247,7 +247,7 @@ searchAddress: async function(address) {
   }
 
   try {
-    const response = await fetch("http://localhost:3000/geocode?q=" + encodeURIComponent(address));
+    const response = await fetch("https://nominatim.openstreetmap.org/search?format=json&q=" + encodeURIComponent(address));
     const data = await response.json();
 
     if (!data || data.length === 0) {
@@ -360,7 +360,7 @@ searchStructuredAddress: async function() {
   const query = parts.join(", ");
 
   try {
-    const response = await fetch("http://localhost:3000/geocode?q=" + encodeURIComponent(query));
+    const response = await fetch("https://nominatim.openstreetmap.org/search?format=json&q=" + encodeURIComponent(query));
     const data = await response.json();
 
     if (!data || data.length === 0) {
