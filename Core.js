@@ -247,8 +247,14 @@ searchAddress: async function(address) {
   }
 
   try {
-    const response = await fetch("https://nominatim.openstreetmap.org/search?format=json&q=" + encodeURIComponent(address));
-    const data = await response.json();
+    const response = await fetch(
+  "https://nominatim.openstreetmap.org/search?format=json&q=" + encodeURIComponent(address),
+  {
+    headers: {
+      "Accept": "application/json"
+    }
+  }
+);
 
     if (!data || data.length === 0) {
       noty({
@@ -360,8 +366,14 @@ searchStructuredAddress: async function() {
   const query = parts.join(", ");
 
   try {
-    const response = await fetch("https://nominatim.openstreetmap.org/search?format=json&q=" + encodeURIComponent(query));
-    const data = await response.json();
+    const response = await fetch(
+  "https://nominatim.openstreetmap.org/search?format=json&q=" + encodeURIComponent(query),
+  {
+    headers: {
+      "Accept": "application/json"
+    }
+  }
+);
 
     if (!data || data.length === 0) {
       noty({
